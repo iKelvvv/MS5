@@ -1,5 +1,11 @@
 # E-Commerce Store
 
+Welcome to my fifth project. This project is an e-commerce store for steak lovers. Users will be able to purchase steaks and steak related equipment from this website. This project will use languages and frameworks such as Django, Python, HTML, CSS and JavaScript.
+
+In this project I will set up an authentication mechanism and provide access to the site's data for users to purchase a range of products.
+
+The admin of the website will also be have the ability to use all CRUD funtionality (Create, Read, Update, Delete).
+
 ## Introduction
 A live website can be found [here]().
 
