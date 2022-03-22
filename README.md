@@ -51,20 +51,53 @@ This project will showcase a range of steaks and steak related products for cust
 [Go to the top](#table-of-contents)
 
 ### Project Goals
-
+One of the main goals of the project is to create a simple and intuitive store where customers can purchase steaks and steak related items. Products will be presented in a elegant and easy view. All site users will be able to navigate around the website clearly.
 
 ### User Goals:
+First Time Visitor Goals
+-   As a first-time visitor, I want to easily view all products and details.
+-   As a first-time visitor, I want to purchase products based on product ratings and recommendations.
+-   As a first-time visitor, I want to be able to checkout as a guest.
 
+Returning Visitor Goals
+-   As a returning visitor, I want to create an account.
+-   As a returning visitor, I want to update my user profile.
+-   As a returning visitor, I want to view my order history.
+
+Frequent User Goals
+-   As a frequent user, I want to read up on the latest blog posts.
 
 ### User Expectations:
+The website should have a simple user interface, with the navigation to each section clear and concise.
 
+-   The menu is clear to read.
+-   The user interface is easy to navigate.
+-   The website is responsive on all devices.
+-   To be able to see a clear selection of products.
+-   Easily view the total of the basket before making any payment.
+-   The website provides responsive feedback for any actions, for example when adding a product to the basket.
 
 ### User Stories
-
+Throughout the project I used the GitHub projects board to log all user stories as my project management tool. This helped me keep focus on the necesarry tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed.
 
 ![user_story_board](
 
 ### Strategy Table
+Opportunity/Problem/Feature| Importance| Viability/Feasibility
+------------ | -------------------------|---------
+Ability to search for products | 5 | 5
+Account signup | 5 | 5
+User profile | 5 | 5
+Responsive design | 5 | 5
+Contact form | 4 | 5
+Ability to add products to the basket | 5 | 5
+Ability to make payment for the selected products | 5 | 5
+Ability to rate products | 5 | 4
+To view blog posts | 5 | 4
+Filters on the products page | 3 | 2
+Subscription based items | 2 | 1
+
+Total | 49 | 46
 
 ## Scope
 
