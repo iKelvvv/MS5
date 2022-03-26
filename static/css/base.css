@@ -4,7 +4,7 @@ html {
 
 body {
     height: calc(100vh - 164px);
-    color: #0d67b5;
+    color: #fff;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
@@ -69,6 +69,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-blue {
+  background: #0d67b5 !important;
 }
 
 /* Index page Carousel */
