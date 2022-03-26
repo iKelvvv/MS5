@@ -15,6 +15,9 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -39,10 +42,10 @@
 </head>
 <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div class="row pt-lg-2 d-none d-lg-flex" id="topnav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                   <img src="https://res.cloudinary.com/ddwgmv42x/image/upload/v1648296738/steakout_logo_rr4inv.jpg" alt="SteakOut logo" width="140" height="120">
+                   <img src="media/steakout_logo.jpeg" alt="SteakOut logo" width="140" height="120">
                 </a>
             </div>
 
@@ -67,7 +70,7 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                    <li class="list-inline-item dropdown">
                        <a href="#" class="text-black nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           <div class="text-center">
+                           <div class="text-center custom-blue">
                                <div><i class="fa fa-user fa-lg"></i></div>
                                <p class="my-0">My Account</p>
                            </div>
@@ -88,7 +91,7 @@
 
                    <li class="list-inline-item">
                         <a href="" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
-                            <div class="text-center">
+                            <div class="text-center custom-blue">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
