@@ -1,0 +1,93 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    color: #0d67b5;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.custom-blue {
+    color: #0d67b5;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #0d67b5;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: #0d67b5;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;   
+    color: #0d67b5 !important;
+    border: 1px solid #0d67b5;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #0d67b5;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #0d67b5;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* Media Queries */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
