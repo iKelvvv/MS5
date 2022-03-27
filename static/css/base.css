@@ -129,6 +129,7 @@ body {
       background: #ccccce;
     }
   }
+  
 /* Media Queries */
 @media (min-width: 1200px) {
     .container {
@@ -148,4 +149,14 @@ body {
     .header-container {
         padding-top: 180px;
     }
+}
+
+@media (max-width: 991px) {
+  .header-container {
+      padding-top: 116px;
+  }
+
+  body {
+    height: calc(100vh- 116px);
+  }
 }
