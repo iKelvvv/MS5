@@ -4,7 +4,7 @@ html {
 
 body {
     height: calc(100vh - 164px);
-    color: #fff;
+    color: #000;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
 }
 
@@ -75,6 +75,16 @@ body {
   background: #0d67b5 !important;
 }
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  z-index: -1;
+}
+
 /* Index page Carousel */
 
 .carousel {
@@ -136,6 +146,6 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 180px;
     }
 }
