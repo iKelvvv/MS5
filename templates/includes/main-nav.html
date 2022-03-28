@@ -25,7 +25,7 @@
             <div class="dropdown-menu border-0" aria-labelledby="steaks-link">
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">All Steaks</a>
+                <a href="{% url 'products' %}?category=steaks" class="dropdown-item">All Steaks</a>
             </div>
         </li>
 
@@ -36,7 +36,18 @@
             <div class="dropdown-menu border-0" aria-labelledby="steak-sauces-link">
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">All Steak Sauces</a>
+                <a href="{% url 'products' %}?category=steak_sauces" class="dropdown-item">All Steak Sauces</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a href="#" class="logo-font font-weight-bold nav-link text-white mr-5" id="grills-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Grills
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="steak-sauces-link">
+                <a href="" class="dropdown-item">By Price</a>
+                <a href="" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?category=grills" class="dropdown-item">All Grills</a>
             </div>
         </li>
 
@@ -45,10 +56,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
