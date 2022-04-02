@@ -11,9 +11,9 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -23,32 +23,22 @@
                 Steaks
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="steaks-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?category=steaks,sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?category=steaks,sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?category=steaks" class="dropdown-item">All Steaks</a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a href="#" class="logo-font font-weight-bold nav-link text-white mr-5" id="steak-sauces-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a href="{% url 'products' %}?category=steak_sauces" class="logo-font font-weight-bold nav-link text-white mr-5" id="steak-sauces-link">
                 Steak Sauces
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="steak-sauces-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?category=steak_sauces" class="dropdown-item">All Steak Sauces</a>
-            </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a href="#" class="logo-font font-weight-bold nav-link text-white mr-5" id="grills-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="{% url 'products' %}?category=grills" class="logo-font font-weight-bold nav-link text-white mr-5" id="grills-link">
                 Grills
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="steak-sauces-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?category=grills" class="dropdown-item">All Grills</a>
-            </div>
         </li>
 
         <li class="nav-item dropdown">
