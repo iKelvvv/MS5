@@ -90,6 +90,11 @@ footer {
   z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+  background: #0d67b5 !important;
+  color: #fff !important;
+}
+
 /* Index page Carousel */
 
 .carousel {
