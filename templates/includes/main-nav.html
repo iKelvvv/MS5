@@ -19,14 +19,9 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a href="#" class="logo-font font-weight-bold nav-link text-white mr-5" id="steaks-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="{% url 'products' %}?category=steaks" class="logo-font font-weight-bold nav-link text-white mr-5" id="steaks-link">
                 Steaks
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="steaks-link">
-                <a href="{% url 'products' %}?category=steaks,sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?category=steaks,sort=rating&direction=desc" class="dropdown-item">By Rating</a>
-                <a href="{% url 'products' %}?category=steaks" class="dropdown-item">All Steaks</a>
-            </div>
         </li>
 
         <li class="nav-item">
