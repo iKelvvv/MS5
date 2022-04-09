@@ -42,6 +42,7 @@
                     </td>
                     <td class="py-3">
                       <p class="my-0 text-center"><strong>{{ item.product.name }}</strong></p>
+                      <p class="my-0 text-center"><strong>Weight: <strong>{% if item.product.has_weight %}{{ item.weight|upper }}{% else %}N/A{% endif %}</strong></strong></p>
                       <p class="my-0 text-center small text-muted">SKU: {{ item.product.sku|upper }}</p>
                     </td>
                     <td class="py-3">
