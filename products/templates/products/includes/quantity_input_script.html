@@ -30,7 +30,7 @@
     // Check enable/disable inputs whener the input is changed
     $('.qty_input').change(function() {
         var itemId = $(this).data('item_id');
-        handleEnableDisable(itemId);
+        handleEnableDisable(itemId, weight);
     });
 
     // Increment Quantity
