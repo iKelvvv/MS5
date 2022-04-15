@@ -136,6 +136,21 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
   }
 
+  .message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999;
+  }
+
+  .custom-toast {
+    overflow: visible;
+  }
+
+  .toast-capper {
+    height: 2px;
+  }
+
   @media all and (max-width: 767px) {
     .carousel-container #carousel-thumbs img {
       border-width: 3px;
