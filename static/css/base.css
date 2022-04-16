@@ -26,6 +26,10 @@ footer {
   text-transform: uppercase;
 }
 
+#logo {
+  margin-left: 9px;
+}
+
 .main-logo-link {
   width: fit-content;
 }
