@@ -4,18 +4,97 @@
 
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Up" %}</h1>
+{% block inner_content %}
+<div class="container">
+  <div class="row mt-4">
+      <div class="col text-center">
+          <h1 class="mt-5">{% trans "Sign Up" %}</h1>
 
-<p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+          <p>{% blocktrans %}Already have an account? Then please
+              <a href="{{ login_url }}">
+                  sign
+                  in
+              </a>
+              .{% endblocktrans %}
+          </p>
 
-<form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form.as_p }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
+          <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+              {% csrf_token %}
+              {% if form.errors %}
+                  {% for field in form %}
+                      {% for error in field.errors %}
+                      <div class="alert alert-error">
+                          <strong>{{ error|escape }}</strong>
+                      </div>
+                      {% endfor %}
+
+                      {% endfor %}
+                      {% for error in form.non_field_errors %}
+                      <div class="alert alert-error">
+                          <strong>{{ error|escape }}</strong>
+                      </div>
+                  {% endfor %}
+              {% endif %}
+
+              <div class="row">
+                  <div class="col-md-5 col-12">
+                      <p>
+                          <label for="id_login">E-mail:</label>
+                      </p>
+                  </div>
+                  <div class="col">
+                      <p>
+                          {{ form.email }}
+                      </p>
+                  </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-5 col-12">
+                    <p>
+                        <label for="id_login">E-mail again:</label>
+                    </p>
+                </div>
+                <div class="col">
+                    <p>
+                        {{ form.email2 }}
+                    </p>
+                </div>
+            </div>
+              
+              <div class="row">
+                  <div class="col-md-5 col-12">
+                      <p>
+                          <label for="id_login">Password:</label>
+                      </p>
+                  </div>
+                  <div class="col">
+                      <p>
+                          {{ form.password1 }}
+                      </p>
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-md-5 col-12">
+                      <p>
+                          <label for="id_login">Password (again):</label>
+                      </p>
+                  </div>
+                  <div class="col">
+                      <p>
+                          {{ form.password2 }}
+                      </p>
+                  </div>
+              </div>
+
+              {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+              <button type="submit" class="btn btn-blue text-white my-5">{% trans "Sign up" %}</button>
+          </form>
+      </div>
+  </div>
+</div>
 
 {% endblock %}
