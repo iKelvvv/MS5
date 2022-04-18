@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-nrns^*k=*##b(p3o8)je_1hor09fe5v(d8n#heh$s4mu0ltqyq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['kelvin-steakout.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -121,11 +121,20 @@ WSGI_APPLICATION = 'SteakOut.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ,get('DATABASE_URL')),
     }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://kktnkvkavvuowb:5e2ab557808f1a65fee0f3f6f6c1e7590541d7948a746014a7adfae58736ddb6@ec2-52-30-67-143.eu-west-1.compute.amazonaws.com:5432/d85qcpr4ifvk0j'),
 }
 
 
