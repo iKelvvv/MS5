@@ -1,0 +1,29 @@
+Hello {{ order.full_name }},
+
+Thank you for your purchase!
+
+This is a confirmation of your order at SteakOut.
+
+Your order information is below:
+
+Order Details:
+Order Number: {{ order.order_nubmer }}
+Order Date: {{ order.date }}
+
+Order Total: £{{ order.order_total }}
+Delivery: £{{ order.delivery_cost }}
+Grand Total: £{{ order.grand_total }}
+
+Shipping Details:
+{{ order.street_address_1 }}
+{{ order.town_or_city }}
+{{ order.postcode }}
+{{ order.county }}
+
+If you have any questions, please contact us at {{ contact.email }}
+
+Again, thank you for your order!
+
+Sincerely,
+
+SteakOut
