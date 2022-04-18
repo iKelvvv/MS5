@@ -49,8 +49,8 @@
                 </div>
 
                 <div class="col-12 col-sm-6 order-sm-last">
-                  <p class="my-2 text-center">£{{ item.product.price }}</p>
-                  <p class="my-2 text-center">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                  <p class="my-2 text-center">Price per item: £{{ item.product.price }}</p>
+                  <p class="my-2 text-center">Subtotal: £{{ item.product.price | calc_subtotal:item.quantity }}</p>
                 </div>
 
                 <div class="col-12 col-sm-6 mb-3">
