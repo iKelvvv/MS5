@@ -212,6 +212,23 @@ a.category-badge>span.badge:hover {
   overflow-y: auto;
 }
 
+/* Product Form */
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 /* Media Queries */
 @media (min-width: 1200px) {
   .container {
