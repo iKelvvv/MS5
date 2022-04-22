@@ -149,56 +149,58 @@
     {% endblock %}
 
     <!-- Footer -->
-            <footer class="page-footer font-small pt-5 mt-5">
-                <div class="container text-center text-md-left">
-                    <div class="row">
-                        <div class="col-md-6 mt-md-0 mb-3">
-                            <h5 class="text-white mb-3">Newsletter</h5>
-                            <p class="small text-white">Subsribe to our newletter!</p>
-                            <form class="newsletter-form" action="#">
-                                <div class="input-group mb-3">
-                                    <input class="form-control" type="text" placeholder="Enter your email address"
-                                        aria-label="Recipient's email" aria-describedby="subscribe-button">
-                                    <button class="btn btn-primary" id="subscribe-button" type="button">
-                                        <i class="fas fa-paper-plane"></i>
-                                    </button>
-                                </div>
-                            </form>
+    <footer class="page-footer font-small pt-5 mt-5">
+        <div class="container text-center text-md-left">
+            <div class="row">
+                <div class="col-md-6 mt-md-0 mb-3">
+                    <h5 class="text-white mb-3">Newsletter</h5>
+                    <p class="small text-white">Subsribe to our newletter!</p>
+                    <form class="newsletter-form" action="{% url 'newsletter' %}" method="POST">
+                      {% csrf_token %}
+                        <div class="input-group mb-3">
+                            <input class="form-control" type="email" name="email" placeholder="Enter your email address"
+                                aria-label="Recipient's email" aria-describedby="subscribe-button">
+                            <button class="btn btn-primary" id="subscribe-button" type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            
                         </div>
-
-                        <div class="col-md-3 mb-md-0 mb-3">
-                            <h5 class="text-uppercase">Business</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a href="{% url 'contact' %}" class="text-white">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="col-md-3 mb-md-0 mb-3">
-                            <h5 class="text-uppercase">Social Media</h5>
-                            <ul class="list-unstyled">
-                                <li>
-                                    <a class="text-white" href="https://facebook.com" target="_blank" rel="noopener"
-                                        aria-label="visit our Facebook page (opens in a new page)"><i
-                                            class="fab fa-facebook"></i> Facebook</a>
-                                </li>
-                                <li>
-                                    <a class="text-white" href="https://twitter.com" target="_blank" rel="noopener"
-                                        aria-label="visit our Twitter page (opens in a new page)"><i
-                                            class="fab fa-twitter"></i> Twitter</a>
-                                </li>
-                                <li>
-                                    <a class="text-white" href="https://instagram.com" target="_blank" rel="noopener"
-                                        aria-label="visit our Instagram page (opens in a new page)"><i
-                                            class="fab fa-instagram"></i> Instagram</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    </form>
                 </div>
-                <div class="footer-copyright text-center py-3">This site was made for educational purposes only.</div>
-            </footer>
+  
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">Business</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="{% url 'contact' %}" class="text-white">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+  
+                <div class="col-md-3 mb-md-0 mb-3">
+                    <h5 class="text-uppercase">Social Media</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="text-white" href="https://facebook.com" target="_blank" rel="noopener"
+                                aria-label="visit our Facebook page (opens in a new page)"><i
+                                    class="fab fa-facebook"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="https://twitter.com" target="_blank" rel="noopener"
+                                aria-label="visit our Twitter page (opens in a new page)"><i
+                                    class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a class="text-white" href="https://instagram.com" target="_blank" rel="noopener"
+                                aria-label="visit our Instagram page (opens in a new page)"><i
+                                    class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">This site was made for educational purposes only.</div>
+    </footer>
 
     {% block postloadjs %}
         <script type="text/javascript">
