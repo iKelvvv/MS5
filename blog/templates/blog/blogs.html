@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col">
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font my-4 text-center">SteakOut Blog</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-12 mt-3 left">
+                <div class="row">
+                    {% for post in posts %}
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <div class="image-container">
+                                    {% if post.image %}
+                                    <img class="card-image-top img-fluid" src=" {{ post.image.url }}">
+                                    {% else %}
+                                    <img src="{{ MEDIA_URL}}noimage.png" alt="{{ post.title }}"
+                                        class="card-img-top img-fluid">
+                                    {% endif %}
+                                    <p class="mt-4">Author: {{ post.author }}</p>
+                                </div>
+                                <h2 class="card-title">{{ post.title }}</h2>
+                                <p class="card-text">{{ post.exceprt }}</p>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    {% if forloop.counter|divisibleby:3 %}
+                </div>
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
