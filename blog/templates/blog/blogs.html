@@ -32,7 +32,7 @@
                             <div class="card-body">
                                 <div class="image-container">
                                     {% if post.image %}
-                                    <img class="card-image-top img-fluid" src=" {{ post.image.url }}">
+                                    <img class="card-img-top img-fluid" src=" {{ post.image.url }}">
                                     {% else %}
                                     <img src="{{ MEDIA_URL}}noimage.png" alt="{{ post.title }}"
                                         class="card-img-top img-fluid">
@@ -42,6 +42,7 @@
                                 <h2 class="card-title">{{ post.title }}</h2>
                                 <p class="card-text">{{ post.exceprt }}</p>
                                 <hr>
+                                <a href="{% url 'post_detail' post.slug  %}" class="post-link">View Post</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +51,6 @@
                 <div class="row">
                     {% endif %}
                     {% endfor %}
-
                 </div>
             </div>
         </div>
