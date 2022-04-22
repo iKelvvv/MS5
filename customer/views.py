@@ -45,3 +45,25 @@ def newsletter(request):
     }
 
     return render(request, 'customer/newsletter.html', context)
+
+
+def newsletter_unsub(request):
+    form = NewsletterForm()
+
+    if request.method == 'POST':
+        form = NewsletterForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            if NewletterSubscribers.objects.filter(email=instance.email).exists():
+                NewletterSubscribers.objects.filter(email=instance.email).delete()
+                messages.success(request, 'You have successfully unsubscribed from our newsletter, we are sorry to see you go.')
+                return redirect(reverse('home'))
+            else:
+                messages.error(request, 'Sorry but we did not find your email address. \
+                    Please check it has been entered correctly.')
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'customer/newsletter-unsubscribe.html', context)

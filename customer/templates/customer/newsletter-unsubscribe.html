@@ -17,9 +17,10 @@
     <div class="row">
         <div class="col">
             <hr>
-            <h2 class="logo-font my-4 text-center">Subscibe to our Newsletter!</h2>
+            <h2 class="logo-font my-4 text-center">Unsubscribe to our Newsletter</h2>
             <hr>
-            <p class="text-center">Be the first to receive the latest top tips and deals.</p>
+            <h3 class="text-center">We are sorry to see you go.</h3>
+            <p class="text-center mt-4">Thank you for being part of the SteakOut newsletter.</p>
         </div>
     </div>
 
@@ -29,11 +30,19 @@
                 <form action="" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <input type="submit" class="btn btn-blue">
+
+                    <a href="{% url 'home' %}" class="btn btn-blue my-2">
+                        <span class="icon">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Back to Profile</span>
+                    </a>
+                    <input type="submit" class="btn btn-blue" value="Confirm">
                 </form>
             </div>
         </div>
     </div>
+
 </div>
 
 {% endblock %}
