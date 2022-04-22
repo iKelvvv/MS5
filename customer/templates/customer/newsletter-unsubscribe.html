@@ -31,12 +31,8 @@
                     {% csrf_token %}
                     {{ form|crispy }}
 
-                    <a href="{% url 'home' %}" class="btn btn-blue my-2">
-                        <span class="icon">
-                            <i class="fas fa-angle-left"></i>
-                        </span>
-                        <span class="text-uppercase">Back to Profile</span>
-                    </a>
+                    <a href="{% url 'home' %}" class="btn btn-outline-blue">Cancel</a>
+
                     <input type="submit" class="btn btn-blue" value="Confirm">
                 </form>
             </div>
