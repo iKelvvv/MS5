@@ -11,7 +11,7 @@ class CustomerContact(models.Model):
     message = models.TextField(max_length=254, null=False, blank=False)
 
 
-class NewletterSubscribers(models.Model):
+class NewletterSubscriber(models.Model):
     """ A Model for the customer newsletter subscription form """
 
     email = models.EmailField(max_length=254, null=False, blank=False)

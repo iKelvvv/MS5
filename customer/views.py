@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
-from .models import NewletterSubscribers
+from .models import NewletterSubscriber
 from .forms import ContactForm, NewsletterForm
 
 
@@ -33,7 +33,7 @@ def newsletter(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            if NewletterSubscribers.objects.filter(email=instance.email).exists():
+            if NewletterSubscriber.objects.filter(email=instance.email).exists():
                 messages.error(request, 'You are already Subscribed')
             else:
                 instance.save()
@@ -54,8 +54,8 @@ def newsletter_unsub(request):
         form = NewsletterForm(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
-            if NewletterSubscribers.objects.filter(email=instance.email).exists():
-                NewletterSubscribers.objects.filter(email=instance.email).delete()
+            if NewletterSubscriber.objects.filter(email=instance.email).exists():
+                NewletterSubscriber.objects.filter(email=instance.email).delete()
                 messages.success(request, 'You have successfully unsubscribed from our newsletter, we are sorry to see you go.')
                 return redirect(reverse('home'))
             else:
