@@ -2,38 +2,37 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col">
-
-        </div>
-    </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="overlay"></div>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font my-4 text-center">Subscibe to our Newsletter!</h2>
-            <hr>
-            <p class="text-center">Be the first to receive the latest top tips and deals.</p>
-        </div>
-    </div>
-
-    <div class="container">
+    <div class="container header-container">
         <div class="row">
-            <div class="col-md-5 col-12 mx-auto py-5">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    {{ form|crispy }}
-                    <input type="submit" class="btn btn-blue">
-                </form>
+            <div class="col">
+
             </div>
         </div>
     </div>
-</div>
+{% endblock %}
 
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font my-4 text-center">Subscibe to our Newsletter!</h2>
+                <hr>
+                <p class="text-center">Be the first to receive the latest top tips and deals.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-12 mx-auto py-5">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input type="submit" class="btn btn-blue">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

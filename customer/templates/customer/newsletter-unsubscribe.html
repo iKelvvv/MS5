@@ -2,43 +2,41 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col">
-
-        </div>
-    </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="overlay"></div>
-<div class="container mt-5">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font my-4 text-center">Unsubscribe to our Newsletter</h2>
-            <hr>
-            <h3 class="text-center">We are sorry to see you go.</h3>
-            <p class="text-center mt-4">Thank you for being part of the SteakOut newsletter.</p>
-        </div>
-    </div>
-
-    <div class="container">
+    <div class="container header-container">
         <div class="row">
-            <div class="col-md-5 col-12 mx-auto py-5">
-                <form action="" method="POST">
-                    {% csrf_token %}
-                    {{ form|crispy }}
+            <div class="col">
 
-                    <a href="{% url 'home' %}" class="btn btn-outline-blue">Cancel</a>
-
-                    <input type="submit" class="btn btn-blue" value="Confirm">
-                </form>
             </div>
         </div>
     </div>
+{% endblock %}
 
-</div>
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h2 class="logo-font my-4 text-center">Unsubscribe from our Newsletter</h2>
+                <hr>
+                <h3 class="text-center">We are sorry to see you go.</h3>
+                <p class="text-center mt-4">Thank you for being part of the SteakOut newsletter.</p>
+            </div>
+        </div>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-12 mx-auto py-5">
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+
+                        <a href="{% url 'home' %}" class="btn btn-outline-blue">Cancel</a>
+
+                        <input type="submit" class="btn btn-blue" value="Confirm">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

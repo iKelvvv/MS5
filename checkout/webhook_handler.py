@@ -1,12 +1,12 @@
+import json
+import time
 from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
-from .models import Order, OrderLineItem
 from products.models import Product
 from profiles.models import UserProfile
-import json
-import time
+from .models import Order, OrderLineItem
 
 
 class StripeWH_Handler:
@@ -89,7 +89,8 @@ class StripeWH_Handler:
             if order_exists:
                 self._send_confirmation_email(order)
                 return HttpResponse(
-                    content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in the database',
+                    content=f'Webhook received: {event["type"]} | SUCCESS: \
+                        Verified order already in the database',
                     status=200)
         else:
             order = None
@@ -134,13 +135,14 @@ class StripeWH_Handler:
                     status=500)
         self._send_confirmation_email(order)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} | SUCCESS: \
+                Created order in webhook',
             status=200
         )
-    
+
     def handle_payment_intent_payment_failed(self, event):
         """ Handle the payment_intent.payment_failed webhook """
-        
+
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200

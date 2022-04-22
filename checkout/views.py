@@ -1,18 +1,17 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+import json
+import stripe
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
-from .forms import OrderForm
-from .models import Order, OrderLineItem
-from products.models import Product
 from bag.contexts import bag_contents
 from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
-import stripe
-import json
+from products.models import Product
+from .forms import OrderForm
+from .models import Order, OrderLineItem
 
-
-# Create your views here.
 
 @require_POST
 def cache_checkout_data(request):
@@ -37,7 +36,7 @@ def checkout(request):
 
     if request.method == 'POST':
         bag = request.session.get('bag', {})
-        
+
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
@@ -77,7 +76,8 @@ def checkout(request):
                             order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't \
+                            found in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -91,7 +91,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(request, "There's nothing in your bag at \
+                the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -137,7 +138,7 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """ Handles successful checkouts """
-    
+
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
 

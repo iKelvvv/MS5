@@ -5,7 +5,7 @@ from products.models import Product
 
 
 def bag_contents(request):
-
+    """ A view to display bag contents """
     bag_items = []
     total = 0
     product_count = 0
@@ -32,7 +32,7 @@ def bag_contents(request):
                     'product': product,
                     'weight': weight,
                 })
-                
+
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total

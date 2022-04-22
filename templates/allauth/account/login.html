@@ -6,77 +6,76 @@
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block inner_content %}
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col text-center">
+                <!-- django all-auth default content -->
+                <h1 class="mt-5">{% trans "Sign In" %}</h1>
 
-<div class="container">
-  <div class="row mt-4">
-      <div class="col text-center">
-          <!-- django all-auth default content -->
-          <h1 class="mt-5">{% trans "Sign In" %}</h1>
+                <p>{% blocktrans %}If you have not created an account yet, then please
+                    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
 
-          <p>{% blocktrans %}If you have not created an account yet, then please
-              <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {% if form.errors %}
+                    {% for field in form %}
+                    {% for error in field.errors %}
+                    <div class="alert alert-error">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                    <div class="alert alert-error">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    <div class="row">
+                        <div class="col-md-5 col-12">
+                            <p>
+                                <label for="id_login">E-mail:</label>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                {{ form.login }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-5 col-12">
+                            <p>
+                                <label for="id_password">Password:</label>
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                {{ form.password }}
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="id_remember">Remember Me:</label>
+                            {{ form.remember }}
+                        </p>
+                    </div>
 
-          <form class="login" method="POST" action="{% url 'account_login' %}">
-              {% csrf_token %}
-              {% if form.errors %}
-              {% for field in form %}
-              {% for error in field.errors %}
-              <div class="alert alert-error">
-                  <strong>{{ error|escape }}</strong>
-              </div>
-              {% endfor %}
-              {% endfor %}
-              {% for error in form.non_field_errors %}
-              <div class="alert alert-error">
-                  <strong>{{ error|escape }}</strong>
-              </div>
-              {% endfor %}
-              {% endif %}
-              <div class="row">
-                  <div class="col-md-5 col-12">
-                      <p>
-                          <label for="id_login">E-mail:</label>
-                      </p>
-                  </div>
-                  <div class="col">
-                      <p>
-                          {{ form.login }}
-                      </p>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-5 col-12">
-                      <p>
-                          <label for="id_password">Password:</label>
-                      </p>
-                  </div>
-                  <div class="col">
-                      <p>
-                          {{ form.password }}
-                      </p>
-                  </div>
-              </div>
-              <div>
-                  <p>
-                      <label for="id_remember">Remember Me:</label>
-                      {{ form.remember }}
-                  </p>
-              </div>
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
 
-              {% if redirect_field_value %}
-              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-              {% endif %}
+                    <div>
+                        <button class="btn btn-blue text-white" type="submit">{% trans "Sign in" %}</button>
+                    </div>
 
-              <div>
-                  <button class="btn btn-blue text-white" type="submit">{% trans "Sign in" %}</button>
-              </div>
-
-              <p class="mt-2">
-                <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-              </p>
-          </form>
-      </div>
-  </div>
-</div>
-
+                    <p class="mt-2">
+                        <a class="button secondaryAction"
+                            href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

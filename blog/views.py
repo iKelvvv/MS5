@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
-from .models import Post
 from django.contrib.auth.decorators import login_required
+from .models import Post
 from .forms import BlogPostForm
 
 
 # Create your views here.
 def blog(request):
-    """ A view to see all published blog posts """
+    """
+    A view to see all published blog posts
+    """
     all_posts = Post.objects.filter(status=1).order_by("-created_on")
 
     context = {
@@ -43,7 +45,9 @@ def add_post(request):
             messages.success(request, 'Blog post added successfully')
             return redirect(reverse('blog'))
         else:
-            messages.error(request, 'Failed to add blog post, Please check the form is valid.')
+            messages.error(
+                request, 'Failed to add blog post, Please check the \
+                    form is valid.')
     else:
         form = BlogPostForm()
 
@@ -69,7 +73,9 @@ def edit_post(request, post):
             messages.success(request, 'Successfully updated this product!')
             return redirect(reverse('post_detail', args=[post.slug]))
         else:
-            messages.error(request, 'Failed to update this product. Please check the form is valid.')
+            messages.error(
+                request, 'Failed to update this product. \
+                    Please check the form is valid.')
     else:
         form = BlogPostForm(instance=post)
         messages.info(request, f'You are editing {post.title}')
@@ -89,10 +95,9 @@ def delete_post(request, post):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store admins can do that.')
         return redirect(reverse('home'))
-        
+
     post = get_object_or_404(Post, slug=post)
     post.delete()
     messages.success(request, 'Post has successfully deleted!')
 
     return redirect(reverse('blog'))
-

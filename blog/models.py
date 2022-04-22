@@ -7,6 +7,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 class Post(models.Model):
+    """
+    Blog post model
+    """
     title = models.CharField(max_length=254)
     slug = models.SlugField(max_length=254, unique=True)
     excerpt = models.TextField(blank=True)
@@ -24,4 +27,3 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
-
