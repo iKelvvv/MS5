@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://kelvin-steakout.herokuapp.com/sitemap.xml
