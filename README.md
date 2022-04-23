@@ -8,9 +8,9 @@ In this project I will set up an authentication mechanism and provide access to 
 
 The admin of the website will also be have the ability to use all CRUD funtionality (Create, Read, Update, Delete).
 
-A live website can be found [here]().
+A live website can be found [here](https://kelvin-steakout.herokuapp.com/).
 
-![website preview]()
+![website preview](documentation_assets/images/website_preview.png)
 
 # Table of Contents
 
@@ -55,14 +55,28 @@ One of the main goals of the project is to create a simple and intuitive store w
 
 ### User Goals:
 First Time Visitor Goals
--   As a first-time visitor, I want to easily view all products and details.
--   As a first-time visitor, I want to purchase products based on product ratings and recommendations.
+-   As a first-time visitor, I want to be able to view a list of products so that I can select some to purchase
+-   As a first-time visitor, I want to view a specific category of products so that I can quickly find products I'm interested in without having to search through all products.
+-   As a first-time visitor, I want to quickly identify deals so that I can take advantage of special savings on products I'd like to purchase.
+-   As a first-time visitor, I want to search for a product key by name or description so that I can find a specific product I'd like to purchase.
+-   As a first-time visitor, I want to view individual product details so that I can identify the price, description, product rating, product image and available sizes/weights.
+-   As a first-time visitor, I want to easily view the total of my purchases at any time so that I can avoid spending too much.
+-   As a first-time visitor, I want to sort the list of available products so that I can easily identify the best rated, best priced and categorically sorted products.
+-   As a first-time visitor, I want to sort a specific category of products so that I can find the best-priced or best-rated products in a specific category, or sort the products in that category by name.
+-   As a first-time visitor, I want to easily add items to my basket so that I can view all the products I would like to purchase before completing payment.
+-   As a first-time visitor, I want to easily remove items and update quantities from my basket so that I can remove any products I do not want before checking out.
+-   As a first-time visitor, I want to easily select the size/weight and quantity of a product when purchasing it so that I can ensure I don’t accidentally select the wrong product, quantity or size/weight.
+-   As a first-time visitor, I want to easily enter my payment information at the checkout page so that I can checkout with no hassles.
+-   As a first-time visitor, I want to feel safe and secure with my personal and payment information so that I can confidently provide the details to make a purchase.
 -   As a first-time visitor, I want to be able to checkout as a guest.
 
 Returning Visitor Goals
 -   As a returning visitor, I want to create an account.
 -   As a returning visitor, I want to update my user profile.
 -   As a returning visitor, I want to view my order history.
+-   As a returning visitor, I want to easily login or logout so that I can access my personal account information.
+-   As a returning visitor, I want to easily register for an account so that I can have a personal account and be able to view my profile.
+
 
 Frequent User Goals
 -   As a frequent user, I want to read up on the latest blog posts.
@@ -100,13 +114,27 @@ Subscription based items | 2 | 1
 Total | 49 | 46
 
 ## Scope
-
+As I am unable to include all of the features from the strategy table. I will phase this project in multiple phases. Phase 1 will be what I have identified as a minimum viable product. Please find below the plans I have for each phase.
 
 ### Phase 1
-
+- Display a range of steak related products
+- Allow users to register for an account
+- Allow users to create and edit a personal profile
+- Responsive design
+- Contact form
+- Ability to add/edit/delete products
+- Ability to add/edit/blog posts
+- Ability to subscribe and unsubscribe to a newsletter form
+- Allow the customer to enter payment information secrurely
+- Provide different weights of steaks
 
 ### Phase 2
-
+- Add other steak realted products
+- Add ability for superusers to send our emails to newsletter subscribers
+- Adjust the price according to the weight selected
+- FAQs page
+- Add ability for users to rate and review products
+- Filter the steak category by the cut of beef
 
 <a name="structure"></a>
 
