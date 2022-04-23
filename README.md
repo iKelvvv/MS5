@@ -142,11 +142,215 @@ As I am unable to include all of the features from the strategy table. I will ph
 
 [Go to the top](#table-of-contents)
 
+It is really important to include responsive design in this project as many users are using different devices (mobile, tablet, laptop/PC). This gives the user the best experience on their device.
+
+- Responsive on all device sizes
+- Easy navigation through labelled buttons
+- Footer at the bottom of the each page that links to the social media websites, newsletter subscription form and business pages.
+- All elements will be consistent including font size, font family, colour scheme.
 
 ### Database Model
-Planned database structure:
-![database_model]()
+Blog model structure:
 
+```python
+class Post(models.Model):
+    """
+    Blog post model
+    """
+    title = models.CharField(max_length=254)
+    slug = models.SlugField(max_length=254, unique=True)
+    excerpt = models.TextField(blank=True)
+    content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts"
+    )
+    status = models.IntegerField(choices=STATUS, default=0)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    class Meta:
+        ordering = ['-status', '-created_on']
+
+    def __str__(self):
+        return self.title
+```
+
+Checkout model structure:
+
+```python
+class Order(models.Model):
+    """
+    A model for the customer order
+    """
+
+    order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(
+        UserProfile, on_delete=models.SET_NULL, null=True, blank=True,
+        related_name='orders')
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = CountryField(blank_label="Country *", null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address_1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address_2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(auto_now=True)
+    delivery_cost = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, default=0)
+    original_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(
+        max_length=254, null=False, blank=False, default='')
+
+    def _generate_order_number(self):
+        """ Generates a random, unique order number """
+        return uuid.uuid4().hex.upper()
+
+    def update_total(self):
+        """
+        Update the grand total each time a line item is added,
+        accounting for delivery costs
+        """
+        self.order_total = self.lineitems.aggregate(
+            Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
+            self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+        else:
+            self.delivery_cost = 0
+        self.grand_total = self.order_total + self.delivery_cost
+        self.save()
+
+    def save(self, *args, **kwargs):
+        """
+        Orverride the original save method to set the order number
+        if it hasn't already been set
+        """
+        if not self.order_number:
+            self.order_number = self._generate_order_number()
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.order_number
+
+
+class OrderLineItem(models.Model):
+    order = models.ForeignKey(
+        Order, on_delete=models.CASCADE, null=False, blank=False,
+        related_name='lineitems')
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, null=False, blank=False)
+    product_weight = models.CharField(max_length=5, null=True, blank=True)
+    quantity = models.IntegerField(null=False, blank=False, default=0)
+    lineitem_total = models.DecimalField(
+        max_digits=6, decimal_places=2, null=False, blank=False,
+        editable=False)
+
+    def save(self, *args, **kwargs):
+        """
+        Orverride the original save method to set the lineitem total
+        and update the order total
+        """
+        self.lineitem_total = self.product.price * self.quantity
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f'SKU {self.product.sku} on order {self.order.order_number}'
+```
+
+Customer model structure:
+
+```python
+class CustomerContact(models.Model):
+    """ A Model for the customer contact form """
+
+    full_name = models.CharField(max_length=254, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    subject = models.CharField(max_length=50, null=False, blank=False)
+    message = models.TextField(max_length=254, null=False, blank=False)
+
+
+class NewletterSubscriber(models.Model):
+    """ A Model for the customer newsletter subscription form """
+
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.email
+```
+
+Products model structure:
+
+```python
+class Category(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    name = models.CharField(max_length=254)
+    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+
+    def get_friendly_name(self):
+        return self.friendly_name
+
+
+class Product(models.Model):
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
+    sku = models.CharField(max_length=254, null=True, blank=True)
+    name = models.CharField(max_length=254)
+    description = models.TextField()
+    has_weight = models.BooleanField(default=False, null=True, blank=True)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
+    image_url = models.URLField(max_length=1024, null=True, blank=True)
+    image = models.ImageField(null=True, blank=True)
+
+    def __str__(self):
+        return self.name
+```
+
+User Profile model structure:
+
+```python
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_street_address_1 = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_street_address_2 = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(
+        max_length=40, null=True, blank=True)
+    default_postcode = models.CharField(
+        max_length=20, null=True, blank=True)
+    default_county = models.CharField(
+        max_length=80, null=True, blank=True)
+    default_country = CountryField(
+        blank_label="Country", null=True, blank=True)
+
+    def __str__(self):
+        return self.user.email
+
+
+@receiver(post_save, sender=User)
+def create_or_update_user_profile(sender, instance, created, **kwargs):
+    """vCreate or update the user profile """
+    if created:
+        UserProfile.objects.create(user=instance)
+    instance.userprofile.save()
+```
 
 <a name="skeleton"></a>
 
@@ -156,6 +360,38 @@ Planned database structure:
 
 ### Wire-frames
 
+Home/Landing Page Desktop:
+![home_page_desktop](documentation_assets/wireframes/home_desktop.png)
+
+Sign Up Page Desktop:
+![sign_up_desktop](documentation_assets/wireframes/sign_up_desktop.png)
+
+Sign In Page Desktop:
+![sign_in_desktop](documentation_assets/wireframes/sign_in_desktop.png)
+
+Products Desktop:
+![products_desktop](documentation_assets/wireframes/products_desktop.png)
+
+Product Details Desktop:
+![products_details_desktop](documentation_assets/wireframes/products_details_desktop.png)
+
+Shopping Bag Desktop:
+![shopping_bag_desktop](documentation_assets/wireframes/shopping_bag_desktop.png)
+
+Checkout Desktop:
+![checkout_desktop](documentation_assets/wireframes/checkout_desktop.png)
+
+Contact Desktop:
+![contact_desktop](documentation_assets/wireframes/contact_desktop.png)
+
+From left to right Home > Sign Up > Sign In Mobile:
+![home_signup_signin_mobile](documentation_assets/wireframes/home_signup_signin_mobile.png)
+
+From left to right Products > Product Details > Shopping Bag Mobile:
+![product_productdetails_shoppingbag_mobile](documentation_assets/wireframes/product_productdetails_shoppingbag_mobile.png)
+
+From left to right Checkout > Contact Mobile:
+![checkout_contact_mobile](documentation_assets/wireframes/checkout_contact_mobile.png)
 
 <a name="surface"></a>
 
@@ -164,9 +400,13 @@ Planned database structure:
 [Go to the top](#table-of-contents)
 
 ### Colours
-
+Please find the colours schemes that I used [here](https://coolors.co/007bff-000000-ffffff).
 
 ### Typography
+
+I decided to use IBM Plex Sans Arabic as my font of choice with sans serif as my backup font for browsers that might not support IBM Plex Sans Arabic.
+
+The link to the font can be found [here](https://fonts.google.com/specimen/IBM+Plex+Sans+Arabic).
 
 
 <a name="features"></a>
