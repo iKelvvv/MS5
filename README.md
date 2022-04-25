@@ -715,6 +715,43 @@ I used the terminal to deploy my project locally. To do this I had to:
 5. Go to local host address on my web browser.
 6. All locally saved changes will show up here.
 
+For the final deployment to Heroku, I had to:
+
+1. Create Heroku App
+2. Install dj_database_url and psycopg2-binary in my local environment
+3. Freeze requirements.txt file
+4. In settings.py import dj_database_url
+5. Backup the local database using "./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json" in the terminal window.
+6. Comment out the local default database
+7. Add the Heroku database url via dj_database_url.parse()
+8. Run migrations to Postgres database
+9. Restore the database using this command "./manage.py loaddata db.json" in the terminal windows.
+10. Create a SuperUser for the Postgres database
+11. Configure the database so the when the app is running on Heroku it uses the Postgres database and when its running locally it uses the SQLite database
+12. Create Procfile so that Heroku creates a web dyno so that it will run gunicorn and serve the Django app
+13. Disable Heroku collect static
+14. Add the Heroku host name to allowed hosts in settings.py
+15. Generate a new Django secret key and add this to the Heroku config variables
+16. Replace secret key in settings.py to grab it from the environment
+17. Set debug to True only if the environment is a development environment
+18. Commit changes and deploy to GitHub and Heroku
+19. Create an AWS account
+20. Create a S3 bucket
+21. Configure the S3 bucket settings and policies
+22. Create and configure IAM service
+23. In the terminal install Boto3 and django-storages
+24. Freeze requirements.txt file
+25. Add statement to the AWS bucket if the environment is "USE_AWS"
+26. Add AWS keys to the Heroku config variables
+27. Create custom storage classes for media and static files
+28. In settings.py add statement to use the static and media storage class and locations
+29. Commit and push to GitHub and Heroku
+30. In the S3 bucket create a new folder for media
+31. Upload all used images to the media file in the S3 bucket
+32. Add the Stripe keys to the Heroku config variables
+33. Create a new webhook endpoint from the Stripe dashboard
+34. Add all the Stripe keys to the Heroku config variables
+
 <a name="seo"></a>
 
 # 6. SEO
@@ -816,6 +853,8 @@ The business will use social media as a platform to promote the business.
 - All images on the site came from [PixelBay](https://pixabay.com/images/) and [UnSplash](https://unsplash.com/s/photos/steak?orientation=landscape).
 
 - All product descriptions on the site came from [Google](https://google.com/).
+
+- The privacy policy on the site came from [PrivacyPolicyGenerator](https://www.privacypolicygenerator.info/).
 
 ### Project Acknowledgements
 - Code Institue Tutor Support - For directing me to the correct solutions for any bugs.
