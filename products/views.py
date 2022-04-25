@@ -120,7 +120,7 @@ def edit_product(request, product_id):
                 Please check the form is valid.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are eidting {product.name}')
+        messages.info(request, f'You are editing {product.name}')
 
     template = 'products/edit_product.html'
     context = {
