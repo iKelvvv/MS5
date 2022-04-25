@@ -706,15 +706,55 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 # 5. Deployment
 [Go to the top](#table-of-contents)
 
+I used the terminal to deploy my project locally. To do this I had to:
+
+1. Create a repository on GitHub.
+2. Clone the repository on your chosen source code editor (GitPod in my case) using the clone link.
+3. Open the terminal within GitPod
+4. Enter "python3 manage.py runserver into the terminal.
+5. Go to local host address on my web browser.
+6. All locally saved changes will show up here.
 
 <a name="seo"></a>
 
 # 6. SEO
+[Go to the top](#table-of-contents)
+
+To improve the SearchEngineOptimisation (SEO) of the site I:
+
+- Added keywords in a meta tag to my base.html. The keywords were researched using [WordTracker](https://www.wordtracker.com/), there are a number of short-tail and long-tail keywords.
+
+- This is a list of all the keywords I came up with, steak sauces, juicy steak, bbq, bbq steaks, summer, bbq, barbecue, buy steak, charcoal grill, grill, premium steak, buy steaks online, bbq steaks, steak grill, bbq grill, best steak cuts, premium steak delivery, premium beef cuts, steak marinade, bbq marinade for steak and large charcoal bbq.
+
+- I ended up using these:
+    - Premium steak
+    - Buy steaks online
+    - BBQ steaks
+    - Steak grill
+    - BBW grill
+    - Best steak cuts
+    - Premium steak delivery
+    - Premium beef cuts
+    - Steak marinade
+    - BBW marinade for steak
+    - Large charcoal bbq
+
+I chose these keywords because they didnt have incredibly high volume and compeition.
 
 
 <a name="marketing"></a>
 
 # 7. Marketing
+[Go to the top](#table-of-contents)
+
+For my marketing strategies I decided to go with the Content marketing, Social media and email marketing root. As these are free options and very effective for an E-commerce store.
+
+- Content marketing - Posting content that contain blog posts and video tutorials will be my primary source to display content.
+
+- Social media - Using these platforms will help build and interact with customers to build relationships and loyaly. This is also help build the brand. Followers will help share the business posts and in results gaining more traction to other people. The same content can be across all social media platforms.
+
+- Email marketing - Using email marking via a newsletter will be beneficial as it is a free source of marketing. Those who are subscribed are more likely to convert into paying customers. This will incerease sales and returning customers as I can provide discount codes and other special offers. A good pro is that the business has total control over the design of the emails.
+
 
 <a name="social-media"></a>
 
@@ -756,8 +796,6 @@ The business will use social media as a platform to promote the business.
 - The original free delivery threshold was set to £49.99, however I ran into a few issues as it would sometimes not calculate free delivery threshold as it was expecting an integer. This was rectified by changing the free delivery threshold figure to £250.
 
 - The google maps iframe sometimes has issue loading on the contact page.
-
-
 
 <a name="credits"></a>
 
