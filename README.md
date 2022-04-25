@@ -556,7 +556,149 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 # 4. Testing
 
 [Go to the top](#table-of-contents)
+### Responsive Tools
+I used [Am I Responsive](http://ami.responsivedesign.is) to make sure that all my pages are responsive to all devices.
 
+### W3C Validator Tools
+
+#### HTML:
+I used [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) to check for any errors within the HTML pages.
+
+I had ocurring errors that were related to Django, for these instances I have chosen to ignore them.
+![HTML_errors_example](documentation_assets/images/html_error_example.png)
+
+#### CSS:
+I used [W3C CSS Validation](https://jigsaw.w3.org/css-validator/) to check for any errors within all my CSS stylesheets.
+
+I had one error in my checkout CSS file, however, I have chosen to ignore this as this code is similar to the Code Institute CSS:
+![css_validation_error](documentation_assets/images/static_css_error.png)
+
+I had no errors in my root level CSS file:
+![css_validation](documentation_assets/images/static_css_no_error.png)
+
+### JavaScript:
+I used [JS Hint](https://jshint.com/) to check for any errors within all my JavaScript script files. JS Hint showed warnings a few warnings but no errors.
+
+I had no errors in my JavaScript files:
+![javascript_validation](documentation_assets/images/javascript_validation.png)
+
+### Python:
+I used the python3 -m flake8 command within GitPod to check for any errors within my Python files. The validator showed multiple "line too long" errors. This was rectified by adding each statement as a new line.
+
+There were also "line too long" errors within my settings.py file but I have chosen to ignore these as this is a very important file.
+
+## Manual Testing
+
+I have tested my site on Safari and google chrome on multiple devices.
+
+These include:
+-   iPhone X
+-   iPhone XS Max
+-   iPad Pro
+-   MacBook Pro
+
+Please find below my testing process for all pages via mobile and web:
+
+### Navigation Bar
+
+All Pages:
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Home page | When clicking the "home" link in the navigation bar (mobile only) or on the business logo, the browser redirects me to the home page. | PASS
+All products page | When clicking the "All Products" link in the navigation bar, the category shows a dropdown list so I have access to more sort/filter options. The user will know they are on this page by the heading. | PASS
+Premium steaks page | When clicking the "Premium Steaks" link in the navigation bar, the browser redirects me to the premium steaks product page. The user will know they are on this page by the heading. | PASS
+Steak sauces page | When clicking the "Steak Sauces" link in the navigation bar, the browser redirects me to the steak sauces product page. The user will know they are on this page by the heading. | PASS
+BBQ grills page | When clicking the "BBQ grills" link in the navigation bar, the browser redirects me to the BBQ grills product page. The user will know they are on this page by the heading. | PASS
+Special offers page | When clicking the "Special Offers" link in the navigation bar, the category shows a dropdown list so I have access to more sort/filter options. | PASS
+Register page | When clicking the "register" link in the navigation bar, the browser redirects me to the register page. The user will know they are on this page by the heading. | PASS
+Login / Logout page | When clicking the "login" or "logout links in the navigation bar, the browser redirects me to the login or logout page. | PASS
+Basket page | When clicking the "basket" icon in the navigation bar, the browser redirects me to the basket page. The user will know they are on this page by the heading. | PASS
+My Profile page | When clicking the "My profile" link in the navigation bar, the browser redirects me to the my profile page. The user will know they are on this page by the heading. | PASS
+Product management page | When clicking the "product management" link as a superuser in the navigation bar, the browser redirects me to the product management page. The user will know they are on this page by the heading. | PASS
+Blog management page | When clicking the "blog management" link as a superuser in the navigation bar, the browser redirects me to the blog management page. The user will know they are on this page by the heading. | PASS
+Search bar | When searching for a keyword, the results will show products that contain the keyword in the product name or description. | PASS
+Foreground & background colour | Checked foreground information is not distracted by background elements. | PASS
+Text | Checked that all fonts and colours used are consistent. | PASS
+
+
+### Footer
+
+All Pages:
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Subscribe to newsletter | When filling out the newsletter form in the navigation bar from the footer, the browser redirects me to the home page if the form was completed successfully. The web page also shows me a success message. | PASS
+Unsubscribe to newsletter page | When clicking the "unsubscribe" link in the footer, the browser redirects me to the newsletter unsubscribe page. The user will know they are on this page by the heading. | PASS
+Contact Us page | When clicking the "contact us" link in the footer, the browser redirects me to the contact page. The user will know they are on this page by the heading. | PASS
+Register page | When clicking the "Register" link in the footer, the browser redirects me to the register page. The user will know they are on this page by the heading.| PASS
+Login page | When clicking the "login" link in the footer, the browser redirects me to the login page. | PASS
+Privacy policy page | When clicking the "Privacy policy" link in the footer, the browser redirects me to the privacy policy page. The user will know they are on this page by the heading. | PASS
+Facebook | When clicking the Facebook icon, a new tab opens and redirects to the Facebook website. | PASS
+Twitter | When clicking the Twitter icon, a new tab opens and redirects to the Twitter website. | PASS
+Instagram | When clicking the Instagram icon, a new tab opens and redirects to the Instagram website. | PASS
+
+### Home page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+
+### Products page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Sort filter | Check the sort/filter functionality by selecting each option. Each option reloads the page and sorts the products in the corresponding order. | PASS
+Edit Button (SuperUser only) | Check the edit button is only accessible if the user is logged in as a SuperUser. | PASS
+Delete Button (SuperUser only) | Check the delete button is only accessible if the user is logged in as a SuperUser. | PASS
+
+### Products details page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Weight selector | Check the weight selector functionality by selecting each option. Adding each option to the basket to confirm the correct weight is selected. | PASS
+Quantity Selector | Check the quantity selector functionality by selecting min and plus buttons where applicable. Adding a product to the basket to confirm the correct quantity selected is correct. | PASS
+Edit Button (SuperUser only) | Check the edit button is only accessible if the user is logged in as a SuperUser. | PASS
+Delete Button (SuperUser only) | Check the delete button is only accessible if the user is logged in as a SuperUser. | PASS
+
+### Shopping bag page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Remove item from bag | Clicking the remove link on an item removes the item from the bag. | PASS
+Quantity Selector | Check the quantity selector functionality by selecting min and plus buttons where applicable. Adding a product to the basket to confirm the correct quantity selected is correct. | PASS
+Free delivery threshold | Adding products to the bag where the grand total value is under £250, the bag shows the free delivery warning message. The message dissappears when the grand total is over £250. | PASS
+
+### Checkout page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Checkout form | Filling in the form with the correct validation processes the order. | PASS
+Checkout form | Filling in the form with the incorrect validation shows errors messages. | PASS
+Save details checkout | Selecting the "Save this delivery information to my profile" checkbox, this saves/updates my profile details. | PASS
+
+### Checkout success page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Order history | When clicking on an order number in the order history section, this takes me to a past order confirmation summary page. | PASS
+Updating my profile | When updating the default delivery information, this reflects on the checkout page. | PASS
+
+### Product management page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Adding a product | When filling out the form to add a new product, the product is added to the relevant category and is searchable via the search bar. | PASS
+Uploading an image | When uploading an image to a new product, the site shows the name of the file that will be uploaded. When checking the product details page, the image also shows. | PASS
+
+### Blog management page
+TEST            | OUTCOME                          | PASS / FAIL  
+--------------- | -------------------------------- | ---------------
+Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
+Adding a Blog post | When filling out the form to add a blog post, the blog post is added to blog main blog section. | PASS
+Uploading an image | When uploading an image to a blog post, the site shows the name of the file that will be uploaded. When checking the all blog posts page, the image also shows. | PASS
 
 <a name="development-cycle"></a>
 
