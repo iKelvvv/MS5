@@ -4,9 +4,9 @@
 
 Welcome to my fifth project. This project is an e-commerce store for steak lovers. Users will be able to purchase steaks and steak related equipment from this website. This project will use languages and frameworks such as Django, Python, HTML, CSS and JavaScript.
 
-In this project I will set up an authentication mechanism and provide access to the site's data for users to purchase a range of products.
+In this project, I will set up an authentication mechanism and provide access to the site's data for users to purchase a range of products.
 
-The admin of the website will also be have the ability to use all CRUD funtionality (Create, Read, Update, Delete).
+The admin of the website will also have the ability to use all CRUD functionality (Create, Read, Update, Delete).
 
 A live website can be found [here](https://kelvin-steakout.herokuapp.com/).
 
@@ -41,9 +41,10 @@ A live website can be found [here](https://kelvin-steakout.herokuapp.com/).
 
 [Go to the top](#table-of-contents)
 
-As a massive fan of steak, I have always experimented with buying steaks online. There are multiple methods that I use when purchasing steaks. The main method I use is ordering from a website. I can clearly identify which cut of steak I would like. This store will mainly focus on simplicity and user experience for the customers.
+As a massive fan of steak, I have always experimented with buying steaks online. There are multiple methods that I use when purchasing steaks. The main method I use is ordering from a website. I can identify which cut of steak I would like. This store will mainly focus on simplicity and user experience for the customers.
 
-This project will showcase a range of steaks and steak related products for customers to purchase. The site will be clear and easilsy accessible. The best e-commerce stores display simply but clear navgiation around the site, with an intuitive design.
+This project will showcase a range of steaks and steak related products for customers to purchase. The site will be clear and easily accessible. The best e-commerce stores display simply but clear navigation around the site, with an intuitive design.
+
 
 <a name="strategy"></a>
 
@@ -52,7 +53,7 @@ This project will showcase a range of steaks and steak related products for cust
 [Go to the top](#table-of-contents)
 
 ### Project Goals
-One of the main goals of the project is to create a simple and intuitive store where customers can purchase steaks and steak related items. Products will be presented in a elegant and easy view. All site users will be able to navigate around the website clearly.
+One of the main goals of the project is to create a simple and intuitive store where customers can purchase steaks and steak related items. Products will be presented in an elegant and easy view. All site users will be able to navigate around the website.
 
 ### User Goals:
 First Time Visitor Goals
@@ -75,7 +76,7 @@ Returning Visitor Goals
 -   As a returning visitor, I want to create an account.
 -   As a returning visitor, I want to update my user profile.
 -   As a returning visitor, I want to view my order history.
--   As a returning visitor, I want to easily login or logout so that I can access my personal account information.
+-   As a returning visitor, I want to easily log in or logout so that I can access my personal account information.
 -   As a returning visitor, I want to easily register for an account so that I can have a personal account and be able to view my profile.
 
 
@@ -93,9 +94,14 @@ The website should have a simple user interface, with the navigation to each sec
 -   The website provides responsive feedback for any actions, for example when adding a product to the basket.
 
 ### User Stories
-Throughout the project I used the GitHub projects board to log all user stories as my project management tool. This helped me keep focus on the necesarry tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed.
+Throughout the project, I used the GitHub projects board to log all user stories as my project management tool. This helped me keep the focus on the necessary tasks as I would move them to the "in progress lane" as I'm working on the story. I would then move them to the "done" lane once the story has been completed. I would add new user stories during the project to keep track of the tasks that had to be done.
 
-![user_story_board](
+Start of project user story board:
+![user_story_board_start](documentation_assets/images/user_story_start.png)
+
+End of project the user story board:
+![user_story_board_finish](documentation_assets/images/user_story_finish.png)
+
 
 ### Strategy Table
 Opportunity/Problem/Feature| Importance| Viability/Feasibility
@@ -126,15 +132,15 @@ As I am unable to include all of the features from the strategy table. I will ph
 - Ability to add/edit/delete products
 - Ability to add/edit/blog posts
 - Ability to subscribe and unsubscribe to a newsletter form
-- Allow the customer to enter payment information secrurely
+- Allow the customer to enter payment information securely
 - Provide different weights of steaks
 
 ### Phase 2
-- Add other steak realted products
-- Add ability for superusers to send our emails to newsletter subscribers
+- Add other steak related products
+- Add the ability for superusers to send our emails to newsletter subscribers
 - Adjust the price according to the weight selected
 - FAQs page
-- Add ability for users to rate and review products
+- Add the ability for users to rate and review products
 - Filter the steak category by the cut of beef
 
 <a name="structure"></a>
@@ -418,7 +424,7 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 
 ### All Pages
 
-- The navigation bar is placed at the top of all pages. This contains 2 sections that are separated out. The first section being the product search bar, my account icon and the basket icon. The second section contains the main navigation for the products. The navigation bar is dynamic in that meaning depending on if the user is logged in or not the options will change.
+- The navigation bar is placed at the top of all pages. This contains 2 sections that are separated. The first section is the product search bar, my account icon and the basket icon. The second section contains the main navigation for the products. The navigation bar is dynamic in that meaning depending on if the user is logged in or not the options will change.
 - If the user is not logged in the navigation bar will look like this:
 ![user_not_logged_in](documentation_assets/images/navbar_not_signed_in.png)
 - If the user is logged in the navigation bar will look like this:
@@ -428,7 +434,7 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 - As a superuser, the admin will have access to the product management and blog management links.
 ![navbar_superuser](documentation_assets/images/navbar_superuser.png)
 
-- The footer is placed at the bottom of each page with social media icons, a form to subsribe to the newsletter, a link to unsubscribe to the newsletter and useful business related links. All links in the footer open the links in a new tab.
+- The footer is placed at the bottom of each page with social media icons, a form to subscribe to the newsletter, a link to unsubscribe to the newsletter and useful business-related links. All links in the footer open the links in a new tab.
 - The business logo is also placed at the top of all pages. Clicking on it will also direct the user to the home page.
 
 ### Sign Up Page
@@ -440,13 +446,13 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 ![password_too_common](documentation_assets/images/signup_password_validation.png)
 - If the user enters both passwords that do not match, the user is prompted by a message.
 ![password_validation](documentation_assets/images/signup_password_matching.png)
-- If the user does not enter a email address the form will show a validation error, prompting the user to enter the field in an email format.
+- If the user does not enter an email address the form will show a validation error, prompting the user to enter the field in an email format.
 ![email_not_valid](documentation_assets/images/signup_email_validation.png)
-- Once the user has successfully signed up, this will send the user a email to confirm activativation of their account.
+- Once the user has successfully signed up, this will send the user an email to confirm activation of their account.
 
 ### Login Page
-- A login form that requires the user to enter their email address and password that they used when signing up to the site.
-- The user can only login once they have activated their account via an email recieved after signing up.
+- A login form that requires the user to enter the email address and password that they used when signing up to the site.
+- The user can only log in once they have activated their account via an email received after signing up.
 - A message to prompt the user that if an account has not been created they can click the signup hyperlink to be redirected to the signup page.
 - If the user enters in the wrong credentials, a message is displayed to the user.
 ![signup_email_validation](documentation_assets/images/login_validation.png)
@@ -458,42 +464,42 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 
 ### Landing Page
 - A carousel that displays what the user can expect from this store.
-- A shop now button that directs the user to all products page. The user can then easily identify products they would like to purchase and add them to the basket.
+- A shop now button that directs the user to the all products page. The user can then easily identify products they would like to purchase and add them to the basket.
 
 ### Products Page
 - The user can access the product pages by selecting the category on the navigation bar.
 - The page displays a count of the search results within the category.
-- Sort by filter at the top right of the page, so the user can filter by price, rating, name and category.
+- Sort by the filter at the top right of the page, so the user can filter by price, rating, name and category.
 - Each product has an image, name of product, price, category and rating.
-- The page also contains a back to top button, where the user can click this to go to the top of the page.
+- The page also contains a back to top button, which the user can click to go to the top of the page.
 - As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
 
 ### Products Details Page
-- The product details will showcase an image, name of product, short description, price, weight selector(if the product has different weights), category and rating, quantity selector, keep shopping button and a add to basket button.
+- The product details will showcase an image, name of the product, short description, price, weight selector(if the product has different weights), category and rating, quantity selector, keep shopping button and an add to basket button.
 - As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
-- The quantity selector starts off at 1. When the quantity is at 1, the minus button is disabled.
+- The quantity selector starts at 1. When the quantity is at 1, the minus button is disabled.
 - When adding a product to the basket, the user will be prompted with a success message confirming the product has been added.
 ![basket_success](documentation_assets/images/basket_success.png)
 
 ### Basket Page
-- This page shows each product as a line item, displaying an image, name of product, weight, SKU, price per item, quantity selected, quantity selector to update and a subtotal for each item.
+- This page shows each product as a line item, displaying an image, name of the product, weight, SKU, price per item, the quantity selected, quantity selector to update and a subtotal for each item.
 - When the quantity selector is at 1, the minus button is disabled.
-- A pricing summary of the whole basket is also shown with the basket total, delivery fee and grand total.
-- If the use has not met free delivery threshold then an alert message is shown, prompting the user that they can qualify for free delivery if they spend more.
+- A pricing summary of the whole basket is also shown with the basket total, delivery fee and total.
+- If the user has not met the free delivery threshold then an alert message is shown, prompting the user that they can qualify for free delivery if they spend more.
 ![delivery_threshold](documentation_assets/images/bag_delivery.png)
 
 ### Checkout Page
-- A checkout form, prompting the user to enter their delivery details with Stripe integration.
-- A checkbox for the user to confirm if they would like to save their details for next time. This only saves delivery details and no the card details.
-- A summary of the users order is also shown, the user can then be sure they are making the correct purchase before continuing with the checkout process.
+- A checkout form, prompts the user to enter their delivery details with Stripe integration.
+- A checkbox for the user to confirm if they would like to save their details for next time. This only saves delivery details and not the card details.
+- A summary of the user's order is also shown, the user can then be sure they are making the correct purchase before continuing with the checkout process.
 - A message is shown just below the complete order button to warn the user that they will be charged a certain amount on their card.
 
 ### Checkout Success Page
 - This page shows a summary of their order, with an order number.
-- Once the user is at this page, an email will also be triggered to send out a order confirmation email.
+- Once the user is on this page, an email will also be triggered to send out an order confirmation email.
 
 ### My Profile Page
-- This page shows a form so the user can update their delivery details. Upon completing of the form, all delivery details will be updated if the user proceeds to the checkout page again.
+- This page shows a form so the user can update their delivery details. Upon completing the form, all delivery details will be updated if the user proceeds to the checkout page again.
 - Order history is also displayed, where the user can select the order number to view a previous order confirmation summary. An alert will also show prompting the user they are viewing a past order confirmation summary.
 ![my_profile](documentation_assets/images/my_profile.png)
 
@@ -506,14 +512,14 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 - A form to add more blog posts.
 
 ### Newsletter Subscribe Page
-- A one field form for the user to enter their email to subscribe to the newsletter.
-- Once the user has successlly subscribed to the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully subscribed to the newsletter.
+- A one-field form for the user to enter their email to subscribe to the newsletter.
+- Once the user has successfully subscribed to the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully subscribed to the newsletter.
 - If the user has already subscribed, an error message will show up.
 ![already_subscribed](documentation_assets/images/newsletter_subscribed.png)
 
 ### Newsletter Unsubscribe Page
-- A one field form for the user to enter their email to unsubscribe from the newsletter.
-- Once the user has successlly unsubscribed from the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully unsubscribed to the newsletter.
+- A one-field form for the user to enter their email to unsubscribe from the newsletter.
+- Once the user has successfully unsubscribed from the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully unsubscribed to the newsletter.
 - If the user enters an email address that is not subscribed to the newsletter, a message will be displayed to the user.
 ![not_subscribed](documentation_assets/images/newsltter_unsub_email.png)
 
@@ -565,7 +571,7 @@ I used [Am I Responsive](http://ami.responsivedesign.is) to make sure that all m
 #### HTML:
 I used [W3C Markup](https://validator.w3.org/#validate_by_input+with_options) to check for any errors within the HTML pages.
 
-I had ocurring errors that were related to Django, for these instances I have chosen to ignore them.
+I had occurring errors that were related to Django, for these instances I have chosen to ignore them.
 ![HTML_errors_example](documentation_assets/images/html_error_example.png)
 
 #### CSS:
@@ -614,7 +620,7 @@ Special offers page | When clicking the "Special Offers" link in the navigation 
 Register page | When clicking the "register" link in the navigation bar, the browser redirects me to the register page. The user will know they are on this page by the heading. | PASS
 Login / Logout page | When clicking the "login" or "logout links in the navigation bar, the browser redirects me to the login or logout page. | PASS
 Basket page | When clicking the "basket" icon in the navigation bar, the browser redirects me to the basket page. The user will know they are on this page by the heading. | PASS
-My Profile page | When clicking the "My profile" link in the navigation bar, the browser redirects me to the my profile page. The user will know they are on this page by the heading. | PASS
+My Profile page | When clicking the "My profile" link in the navigation bar, the browser redirects me to my profile page. The user will know they are on this page by the heading. | PASS
 Product management page | When clicking the "product management" link as a superuser in the navigation bar, the browser redirects me to the product management page. The user will know they are on this page by the heading. | PASS
 Blog management page | When clicking the "blog management" link as a superuser in the navigation bar, the browser redirects me to the blog management page. The user will know they are on this page by the heading. | PASS
 Search bar | When searching for a keyword, the results will show products that contain the keyword in the product name or description. | PASS
@@ -640,13 +646,13 @@ Instagram | When clicking the Instagram icon, a new tab opens and redirects to t
 ### Home page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
 
 ### Products page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
 Sort filter | Check the sort/filter functionality by selecting each option. Each option reloads the page and sorts the products in the corresponding order. | PASS
 Edit Button (SuperUser only) | Check the edit button is only accessible if the user is logged in as a SuperUser. | PASS
@@ -655,26 +661,26 @@ Delete Button (SuperUser only) | Check the delete button is only accessible if t
 ### Products details page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
-Weight selector | Check the weight selector functionality by selecting each option. Adding each option to the basket to confirm the correct weight is selected. | PASS
-Quantity Selector | Check the quantity selector functionality by selecting min and plus buttons where applicable. Adding a product to the basket to confirm the correct quantity selected is correct. | PASS
+Weight selector | Check the weight selector functionality by selecting each option. Add each option to the basket to confirm the correct weight is selected. | PASS
+Quantity Selector | Check the quantity selector functionality by selecting minus and plus buttons where applicable. Adding a product to the basket to confirm the correct quantity selected is correct. | PASS
 Edit Button (SuperUser only) | Check the edit button is only accessible if the user is logged in as a SuperUser. | PASS
 Delete Button (SuperUser only) | Check the delete button is only accessible if the user is logged in as a SuperUser. | PASS
 
 ### Shopping bag page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
 Remove item from bag | Clicking the remove link on an item removes the item from the bag. | PASS
 Quantity Selector | Check the quantity selector functionality by selecting min and plus buttons where applicable. Adding a product to the basket to confirm the correct quantity selected is correct. | PASS
-Free delivery threshold | Adding products to the bag where the grand total value is under £250, the bag shows the free delivery warning message. The message dissappears when the grand total is over £250. | PASS
+Free delivery threshold | Adding products to the bag where the grand total value is under £250, the bag shows the free delivery warning message. The message disappears when the grand total is over £250. | PASS
 
 ### Checkout page
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
-Media | All media assets are displayed properly, have no pixelation or stretched images and is responsive on all devices. | PASS
+Media | All media assets are displayed properly, have no pixelation or stretched images and are responsive on all devices. | PASS
 Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
 Checkout form | Filling in the form with the correct validation processes the order. | PASS
 Checkout form | Filling in the form with the incorrect validation shows errors messages. | PASS
@@ -698,7 +704,7 @@ Uploading an image | When uploading an image to a new product, the site shows th
 TEST            | OUTCOME                          | PASS / FAIL  
 --------------- | -------------------------------- | ---------------
 Responsiveness | Check every element on the page for consistent scalability in mobile, tablet and desktop view.| PASS
-Adding a Blog post | When filling out the form to add a blog post, the blog post is added to blog main blog section. | PASS
+Adding a Blog post | When filling out the form to add a blog post, the blog post is added to the blog main blog section. | PASS
 Uploading an image | When uploading an image to a blog post, the site shows the name of the file that will be uploaded. When checking the all blog posts page, the image also shows. | PASS
 
 <a name="deployment"></a>
@@ -712,7 +718,7 @@ I used the terminal to deploy my project locally. To do this I had to:
 2. Clone the repository on your chosen source code editor (GitPod in my case) using the clone link.
 3. Open the terminal within GitPod
 4. Enter "python3 manage.py runserver into the terminal.
-5. Go to local host address on my web browser.
+5. Go to localhost address on my web browser.
 6. All locally saved changes will show up here.
 
 For the final deployment to Heroku, I had to:
@@ -721,30 +727,30 @@ For the final deployment to Heroku, I had to:
 2. Install dj_database_url and psycopg2-binary in my local environment
 3. Freeze requirements.txt file
 4. In settings.py import dj_database_url
-5. Backup the local database using "./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json" in the terminal window.
+5. Back up the local database using "./manage.py dumpdata --exclude auth.permission --exclude contenttypes > db.json" in the terminal window.
 6. Comment out the local default database
 7. Add the Heroku database url via dj_database_url.parse()
-8. Run migrations to Postgres database
+8. Run migrations to the Postgres database
 9. Restore the database using this command "./manage.py loaddata db.json" in the terminal windows.
 10. Create a SuperUser for the Postgres database
-11. Configure the database so the when the app is running on Heroku it uses the Postgres database and when its running locally it uses the SQLite database
+11. Configure the database so that when the app is running on Heroku it uses the Postgres database and when it's running locally it uses the SQLite database
 12. Create Procfile so that Heroku creates a web dyno so that it will run gunicorn and serve the Django app
 13. Disable Heroku collect static
-14. Add the Heroku host name to allowed hosts in settings.py
+14. Add the Heroku hostname to allowed hosts in settings.py
 15. Generate a new Django secret key and add this to the Heroku config variables
-16. Replace secret key in settings.py to grab it from the environment
+16. Replace the secret key in settings.py to grab it from the environment
 17. Set debug to True only if the environment is a development environment
 18. Commit changes and deploy to GitHub and Heroku
 19. Create an AWS account
-20. Create a S3 bucket
+20. Create an S3 bucket
 21. Configure the S3 bucket settings and policies
-22. Create and configure IAM service
-23. In the terminal install Boto3 and django-storages
+22. Create and configure the IAM service
+23. In the terminal install Boto3 and Django-storages
 24. Freeze requirements.txt file
-25. Add statement to the AWS bucket if the environment is "USE_AWS"
+25. Add a statement to the AWS bucket if the environment is "USE_AWS"
 26. Add AWS keys to the Heroku config variables
 27. Create custom storage classes for media and static files
-28. In settings.py add statement to use the static and media storage class and locations
+28. In settings.py add a statement to use the static and media storage class and locations
 29. Commit and push to GitHub and Heroku
 30. In the S3 bucket create a new folder for media
 31. Upload all used images to the media file in the S3 bucket
@@ -757,7 +763,7 @@ For the final deployment to Heroku, I had to:
 # 6. SEO
 [Go to the top](#table-of-contents)
 
-To improve the SearchEngineOptimisation (SEO) of the site I:
+To improve the search engine optimisation (SEO) of the site I:
 
 - Added keywords in a meta tag to my base.html. The keywords were researched using [WordTracker](https://www.wordtracker.com/), there are a number of short-tail and long-tail keywords.
 
@@ -776,7 +782,7 @@ To improve the SearchEngineOptimisation (SEO) of the site I:
     - BBW marinade for steak
     - Large charcoal bbq
 
-I chose these keywords because they didnt have incredibly high volume and compeition.
+I chose these keywords because they didn't have incredibly high volume and competition.
 
 
 <a name="marketing"></a>
@@ -784,13 +790,13 @@ I chose these keywords because they didnt have incredibly high volume and compei
 # 7. Marketing
 [Go to the top](#table-of-contents)
 
-For my marketing strategies I decided to go with the Content marketing, Social media and email marketing root. As these are free options and very effective for an E-commerce store.
+For my marketing strategies, I decided to go with content marketing, Social media and email marketing root. As these are free options and very effective for an E-commerce store.
 
-- Content marketing - Posting content that contain blog posts and video tutorials will be my primary source to display content.
+- Content marketing - Posting content that contains blog posts and video tutorials will be my primary source to display content.
 
-- Social media - Using these platforms will help build and interact with customers to build relationships and loyaly. This is also help build the brand. Followers will help share the business posts and in results gaining more traction to other people. The same content can be across all social media platforms.
+- Social media - Using these platforms will help build and interact with customers to build relationships and loyalty. This also helps build the brand. Followers will help share the business posts and in result gain more traction with other people. The same content can be across all social media platforms.
 
-- Email marketing - Using email marking via a newsletter will be beneficial as it is a free source of marketing. Those who are subscribed are more likely to convert into paying customers. This will incerease sales and returning customers as I can provide discount codes and other special offers. A good pro is that the business has total control over the design of the emails.
+- Email marketing - Using email marking via a newsletter will be beneficial as it is a free source of marketing. Those who are subscribed are more likely to convert into paying customers. This will increase sales and returning customers as I can provide discount codes and other special offers. A good pro is that the business has total control over the design of the emails.
 
 
 <a name="social-media"></a>
@@ -830,9 +836,9 @@ The business will use social media as a platform to promote the business.
 
 - The quantity selector for the products had a bug where the minus button was not disabled on mobile devices. This was rectified with CodeInstitute guidance.
 
-- The original free delivery threshold was set to £49.99, however I ran into a few issues as it would sometimes not calculate free delivery threshold as it was expecting an integer. This was rectified by changing the free delivery threshold figure to £250.
+- The original free delivery threshold was set to £49.99, however, I ran into a few issues as it would sometimes not calculate the free delivery threshold as it was expecting an integer. This was rectified by changing the free delivery threshold figure to £250.
 
-- The google maps iframe sometimes has issue loading on the contact page.
+- The google maps iframe sometimes has an issue loading on the contact page.
 
 <a name="credits"></a>
 
