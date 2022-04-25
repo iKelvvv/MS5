@@ -522,6 +522,34 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 
 [Go to the top](#table-of-contents)
 
+-   [HTML5](https://en.wikipedia.org/wiki/HTML)
+    -   The project uses HyperText Markup Language.
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
+    -   The project uses Cascading Style Sheets.
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+    -   The project uses JavaScript.
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+    -   The project uses Python.
+-   [Django](https://www.djangoproject.com/)
+    -   The project uses Django as the main framework.
+-   [Boostrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+    -   The project uses Bootstrap 4.
+-   [PostgreSQL](https://www.postgresql.org/)
+    -   The project uses PostgreSQL as a database.
+-   [AWS](https://aws.amazon.com/)
+    -   The project uses Amazon Web Services to host all static and media files.
+-   [Gitpod](https://www.gitpod.io/)
+    -   The project uses Gitpod.
+-   [Chrome](https://www.google.com/intl/en_uk/chrome/)
+    -   The project uses Chrome to debug and test the source code using HTML5.
+-   [Heroku](https://www.heroku.com/)
+    -   The project is deployed and hosted by Heroku.
+-   [Balsamiq](https://balsamiq.com/)
+    -   Balsamiq was used to create the wireframes during the design process.
+-   [Google Fonts](https://fonts.google.com/)
+    -   Google fonts were used to import the "Be Vietnam Pro" font into the style.css file which is used on all pages throughout the project.
+-   [GitHub](https://github.com/)
+    -   GitHub was used to store the project's code after being pushed from Git.
 
 <a name="testing"></a>
 
