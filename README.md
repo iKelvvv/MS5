@@ -27,12 +27,11 @@ A live website can be found [here](https://kelvin-steakout.herokuapp.com/).
 -   [2. Features](#features)
 -   [3. Technologies Used](#technologies-used)
 -   [4. Testing](#testing)
--   [5. Development Cycle](#development-cycle)
--   [6. Deployment](#deployment)
--   [7. Social Media](#social-media)
--   [8. End Product](#end-product)
--   [9. Known Bugs](#known-bugs)
--   [10. Credits](#credits)
+-   [5. Deployment](#deployment)
+-   [6. Social Media](#social-media)
+-   [7. End Product](#end-product)
+-   [8. Known Bugs](#known-bugs)
+-   [9. Credits](#credits)
 
 <a name="ux"></a>
 
@@ -702,36 +701,42 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 
 <a name="development-cycle"></a>
 
-# 5. Development Cycle
-
+# 5. Deployment
 [Go to the top](#table-of-contents)
-
-<a name="deployment"></a>
-
-# 6. Deployment
-
-[Go to the top](#table-of-contents)
-
 
 <a name="social-media"></a>
 
-# 7. Social Media Product Page
-
+# 6. Social Media Product Page
 [Go to the top](#table-of-contents)
 
 
 <a name="end-product"></a>
 
-# 8. End Product
-
+# 7. End Product
 [Go to the top](#table-of-contents)
+
+![end_product_home](documentation_assets/images/end_product_home.png)
+![end_product_all_products](documentation_assets/images/end_product_all_products.png)
+![end_product_product_details](documentation_assets/images/end_product_product_details.png)
+![end_product_shopping_bag](documentation_assets/images/end_product_shopping_bag.png)
+![end_product_checkout](documentation_assets/images/end_product_checkout.png)
+![end_product_order_confirmation](documentation_assets/images/end_product_order_confirmation.png)
+![end_product_my_profile](documentation_assets/images/end_product_my_profile.png)
+![end_product_privacy_policy](documentation_assets/images/end_product_privacy_policy.png)
+![end_product_subscribe](documentation_assets/images/end_product_subscribe.png)
+![end_product_unsubscribe](documentation_assets/images/end_product_unsubscribe.png)
+![end_product_add_blog_post](documentation_assets/images/end_product_add_blog_post.png)
+![end_product_add_product](documentation_assets/images/end_product_add_product.png)
+![end_product_contact](documentation_assets/images/end_product_contact.png)
+![end_product_all_blog_posts](documentation_assets/images/end_product_all_blog_posts.png)
+![end_product_blog_details](documentation_assets/images/end_product_blog_details.png)
 
 <a name="known-bugs"></a>
 
-# 9. Known Bugs
+# 8. Known Bugs
 
 <a name="credits"></a>
 
-# 10. Credits
+# 9. Credits
 
 [Go to the top](#table-of-contents)
