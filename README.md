@@ -415,6 +415,106 @@ The link to the font can be found [here](https://fonts.google.com/specimen/IBM+P
 
 [Go to the top](#table-of-contents)
 
+### All Pages
+
+- The navigation bar is placed at the top of all pages. This contains 2 sections that are separated out. The first section being the product search bar, my account icon and the basket icon. The second section contains the main navigation for the products. The navigation bar is dynamic in that meaning depending on if the user is logged in or not the options will change.
+- If the user is not logged in the navigation bar will look like this:
+![user_not_logged_in](documentation_assets/images/navbar_not_signed_in.png)
+- If the user is logged in the navigation bar will look like this:
+![user_logged_in](documentation_assets/images/navbar_signed_in_user.png)
+- If the user is logged in as a superuser the navigation bar will look like this:
+![user_logged_in](documentation_assets/images/navbar_signed_in_superuser.png)
+- As a superuser, the admin will have access to the product management and blog management links.
+![navbar_superuser](documentation_assets/images/navbar_superuser.png)
+
+- The footer is placed at the bottom of each page with social media icons, a form to subsribe to the newsletter, a link to unsubscribe to the newsletter and useful business related links. All links in the footer open the links in a new tab.
+- The business logo is also placed at the top of all pages. Clicking on it will also direct the user to the home page.
+
+### Sign Up Page
+- A simple signup form that requires the user to enter a unique email address and a password. The password must be entered again for confirmation, this must match the already entered password above.
+- A message to prompt the user that if an account is already been created they can click the sign-in hyperlink to be redirected to the sign-in page.
+- If the user enters an email address that has already been registered, the user is prompted by an error message.
+![email_registered_error](documentation_assets/images/signup_email_registered.png)
+- If the user enters a password that is not secure, the user will be prompted by a message.
+![password_too_common](documentation_assets/images/signup_password_validation.png)
+- If the user enters both passwords that do not match, the user is prompted by a message.
+![password_validation](documentation_assets/images/signup_password_matching.png)
+- If the user does not enter a email address the form will show a validation error, prompting the user to enter the field in an email format.
+![email_not_valid](documentation_assets/images/signup_email_validation.png)
+- Once the user has successfully signed up, this will send the user a email to confirm activativation of their account.
+
+### Login Page
+- A login form that requires the user to enter their email address and password that they used when signing up to the site.
+- The user can only login once they have activated their account via an email recieved after signing up.
+- A message to prompt the user that if an account has not been created they can click the signup hyperlink to be redirected to the signup page.
+- If the user enters in the wrong credentials, a message is displayed to the user.
+![signup_email_validation](documentation_assets/images/login_validation.png)
+- Once the user has successfully logged in, they will be redirected to the home page. A success message will show to confirm the login has been successful.
+![logged_in_preview](documentation_assets/images/logged_in.png)
+
+### Logout Page
+- When clicking logout from the navigation bar, the user is redirected to a sign-out page to confirm their action.
+
+### Landing Page
+- A carousel that displays what the user can expect from this store.
+- A shop now button that directs the user to all products page. The user can then easily identify products they would like to purchase and add them to the basket.
+
+### Products Page
+- The user can access the product pages by selecting the category on the navigation bar.
+- The page displays a count of the search results within the category.
+- Sort by filter at the top right of the page, so the user can filter by price, rating, name and category.
+- Each product has an image, name of product, price, category and rating.
+- The page also contains a back to top button, where the user can click this to go to the top of the page.
+- As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
+
+### Products Details Page
+- The product details will showcase an image, name of product, short description, price, weight selector(if the product has different weights), category and rating, quantity selector, keep shopping button and a add to basket button.
+- As a superuser, the admin can see the edit and delete buttons, allowing quick access to the product admin.
+- The quantity selector starts off at 1. When the quantity is at 1, the minus button is disabled.
+- When adding a product to the basket, the user will be prompted with a success message confirming the product has been added.
+![basket_success](documentation_assets/images/basket_success.png)
+
+### Basket Page
+- This page shows each product as a line item, displaying an image, name of product, weight, SKU, price per item, quantity selected, quantity selector to update and a subtotal for each item.
+- When the quantity selector is at 1, the minus button is disabled.
+- A pricing summary of the whole basket is also shown with the basket total, delivery fee and grand total.
+- If the use has not met free delivery threshold then an alert message is shown, prompting the user that they can qualify for free delivery if they spend more.
+![delivery_threshold](documentation_assets/images/bag_delivery.png)
+
+### Checkout Page
+- A checkout form, prompting the user to enter their delivery details with Stripe integration.
+- A checkbox for the user to confirm if they would like to save their details for next time. This only saves delivery details and no the card details.
+- A summary of the users order is also shown, the user can then be sure they are making the correct purchase before continuing with the checkout process.
+- A message is shown just below the complete order button to warn the user that they will be charged a certain amount on their card.
+
+### Checkout Success Page
+- This page shows a summary of their order, with an order number.
+- Once the user is at this page, an email will also be triggered to send out a order confirmation email.
+
+### My Profile Page
+- This page shows a form so the user can update their delivery details. Upon completing of the form, all delivery details will be updated if the user proceeds to the checkout page again.
+- Order history is also displayed, where the user can select the order number to view a previous order confirmation summary. An alert will also show prompting the user they are viewing a past order confirmation summary.
+![my_profile](documentation_assets/images/my_profile.png)
+
+### Product Management Page
+- This page is for superusers only.
+- A form to add more products to the store.
+
+### Blog Management Page
+- This page is for superusers only.
+- A form to add more blog posts.
+
+### Newsletter Subscribe Page
+- A one field form for the user to enter their email to subscribe to the newsletter.
+- Once the user has successlly subscribed to the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully subscribed to the newsletter.
+- If the user has already subscribed, an error message will show up.
+![already_subscribed](documentation_assets/images/newsletter_subscribed.png)
+
+### Newsletter Unsubscribe Page
+- A one field form for the user to enter their email to unsubscribe from the newsletter.
+- Once the user has successlly unsubscribed from the newsletter, they will be redirected to the home page. A success message will show up confirming the user has successfully unsubscribed to the newsletter.
+- If the user enters an email address that is not subscribed to the newsletter, a message will be displayed to the user.
+![not_subscribed](documentation_assets/images/newsltter_unsub_email.png)
 
 <a name="technologies-used"></a>
 
