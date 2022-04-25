@@ -28,10 +28,12 @@ A live website can be found [here](https://kelvin-steakout.herokuapp.com/).
 -   [3. Technologies Used](#technologies-used)
 -   [4. Testing](#testing)
 -   [5. Deployment](#deployment)
--   [6. Social Media](#social-media)
--   [7. End Product](#end-product)
--   [8. Known Bugs](#known-bugs)
--   [9. Credits](#credits)
+-   [6. SEO](#seo)
+-   [7. Marketing](#marketing)
+-   [8. Social Media](#social-media)
+-   [9. End Product](#end-product)
+-   [10. Known Bugs](#known-bugs)
+-   [11. Credits](#credits)
 
 <a name="ux"></a>
 
@@ -699,21 +701,33 @@ Responsiveness | Check every element on the page for consistent scalability in m
 Adding a Blog post | When filling out the form to add a blog post, the blog post is added to blog main blog section. | PASS
 Uploading an image | When uploading an image to a blog post, the site shows the name of the file that will be uploaded. When checking the all blog posts page, the image also shows. | PASS
 
-<a name="development-cycle"></a>
+<a name="deployment"></a>
 
 # 5. Deployment
 [Go to the top](#table-of-contents)
 
+
+<a name="seo"></a>
+
+# 6. SEO
+
+
+<a name="marketing"></a>
+
+# 7. Marketing
+
 <a name="social-media"></a>
 
-# 6. Social Media Business Page
+# 8. Social Media Business Page
 [Go to the top](#table-of-contents)
 
 ![facebook_business_page](documentation_assets/images/facebook_business_page.png)
 
+The business will use social media as a platform to promote the business.
+
 <a name="end-product"></a>
 
-# 7. End Product
+# 9. End Product
 [Go to the top](#table-of-contents)
 
 ![end_product_home](documentation_assets/images/end_product_home.png)
@@ -734,10 +748,12 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 
 <a name="known-bugs"></a>
 
-# 8. Known Bugs
+# 10. Known Bugs
 [Go to the top](#table-of-contents)
 
+- The quantity selector for the products had a bug where the minus button was not disabled on mobile devices. This was rectified with CodeInstitute guidance.
 
+- The original free delivery threshold was set to £49.99, however I ran into a few issues as it would sometimes not calculate free delivery threshold as it was expecting an integer. This was rectified by changing the free delivery threshold figure to £250.
 
 - The google maps iframe sometimes has issue loading on the contact page.
 
@@ -745,7 +761,7 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 
 <a name="credits"></a>
 
-# 9. Credits
+# 11. Credits
 
 [Go to the top](#table-of-contents)
 
@@ -754,6 +770,7 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 - The blog post content came from the [Kitchensanctuary](https://www.kitchensanctuary.com/how-to-cook-the-perfect-steak/) and [Tasteofhome](https://www.tasteofhome.com/collection/types-of-steak-everyone-should-know/) website.
 
 - The carousel on the home page came from an example on [CodePen](https://codepen.io/bechster/pen/jgYzrq)
+
 
 ### Content
 -   The restaurant logo came from [Adobe Creative Cloud Express logo maker](https://www.adobe.com/express/create/logo).
