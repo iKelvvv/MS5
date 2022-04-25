@@ -706,9 +706,10 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 
 <a name="social-media"></a>
 
-# 6. Social Media Product Page
+# 6. Social Media Business Page
 [Go to the top](#table-of-contents)
 
+![facebook_business_page](documentation_assets/images/facebook_business_page.png)
 
 <a name="end-product"></a>
 
@@ -734,9 +735,34 @@ Uploading an image | When uploading an image to a blog post, the site shows the 
 <a name="known-bugs"></a>
 
 # 8. Known Bugs
+[Go to the top](#table-of-contents)
+
+
+
+- The google maps iframe sometimes has issue loading on the contact page.
+
+
 
 <a name="credits"></a>
 
 # 9. Credits
 
 [Go to the top](#table-of-contents)
+
+### Code
+
+- The blog post content came from the [Kitchensanctuary](https://www.kitchensanctuary.com/how-to-cook-the-perfect-steak/) and [Tasteofhome](https://www.tasteofhome.com/collection/types-of-steak-everyone-should-know/) website.
+
+- The carousel on the home page came from an example on [CodePen](https://codepen.io/bechster/pen/jgYzrq)
+
+### Content
+-   The restaurant logo came from [Adobe Creative Cloud Express logo maker](https://www.adobe.com/express/create/logo).
+
+- All images on the site came from [PixelBay](https://pixabay.com/images/) and [UnSplash](https://unsplash.com/s/photos/steak?orientation=landscape).
+
+- All product descriptions on the site came from [Google](https://google.com/).
+
+### Project Acknowledgements
+- Code Institue Tutor Support - For directing me to the correct solutions for any bugs.
+
+- My Mentor - For his constructive criticism and always pushing me to go further to develop my skills.
