@@ -685,6 +685,7 @@ Responsiveness | Check every element on the page for consistent scalability in m
 Checkout form | Filling in the form with the correct validation processes the order. | PASS
 Checkout form | Filling in the form with the incorrect validation shows errors messages. | PASS
 Save details checkout | Selecting the "Save this delivery information to my profile" checkbox, this saves/updates my profile details. | PASS
+Card authentication | Used the Stripe test card details and purposely failed authenticated to check for error messages. | PASS
 
 ### Checkout success page
 TEST            | OUTCOME                          | PASS / FAIL  
