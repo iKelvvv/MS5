@@ -838,7 +838,7 @@ The business will use social media as a platform to promote the business.
 
 - The original free delivery threshold was set to £49.99, however, I ran into a few issues as it would sometimes not calculate the free delivery threshold as it was expecting an integer. This was rectified by changing the free delivery threshold figure to £250.
 
-- The google maps iframe sometimes has an issue loading on the contact page.
+- The google maps iframe sometimes has an issue loading on the contact page. I have rectified this by replacing the iframe with a static image.
 
 <a name="credits"></a>
 
